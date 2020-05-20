@@ -1,0 +1,48 @@
+<%- include('../includes/head.ejs') %>
+<section class="form-add-marker">
+    <h1><%= pageTitle %> </h1>
+    <div class="container h-100">
+
+        <div class="row">
+            <form class="col-12 col-md-6 add-marker h-100" action="/add-marker" method="POST">
+
+                <div class="elemInput">
+                    <label for="lieu">Lieu</label>
+                    <input type="text" name="lieu" id="lieu" placeholder="lieu">
+                </div>
+                <div class="elemInput">
+                    <label for="longitude">Longitude</label>
+                    <input type="text" name="longitude" id="longitude" placeholder="Longitude du marqueur">
+                </div>
+                <div class="elemInput">
+                    <label for="latitude">Latitude</label>
+                    <input type="text" name="latitude" id="latitude" placeholder="Latitude du marqueur">
+                </div>
+
+                <div class="elemInput">
+                    <label for="pays">Pays</label>
+                    <input type="text" name="pays" id="pays" placeholder="Pays">
+                </div>
+                <div class="elemInput">
+                    <label for="ville">Ville</label>
+                    <input type="text" name="ville" id="ville" placeholder="Ville">
+                </div>
+                <div class="elemInput">
+                    <label for="categorie">Catégorie</label>
+                    <input type="text" name="categorie" id="categorie" placeholder="Categorie">
+                </div>
+                <div class="elemInput">
+                    <label for="description">Description du lieu</label>
+                    <textarea name="description" id="description" rows="5"
+                        placeholder="Ajoute un extrait de l'article"></textarea>
+                </div>
+
+                <button class="btn-add-post btn" type="submit">Ajouter un Marker</button>
+            </form>
+            <div class="col-12 col-md-6">
+
+            </div>
+        </div>
+    </div>
+</section>
+<%- include('../includes/footer.ejs') %>

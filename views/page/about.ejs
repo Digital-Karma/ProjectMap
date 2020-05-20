@@ -1,0 +1,35 @@
+<%- include('../includes/head.ejs') %>
+<header>
+
+</header>
+<section id="concept" class="container-fluid">
+    <div class="row">
+        <div class="col-6">
+            <h2>Blog</h2>
+            <p><%= marker.lieu %></p>
+        </div>
+    </div>
+    <main class="row">
+        <% if (marker.length > 0) { %>
+        <% for (let markers of marker) { %>
+        <div class="card-blog col-10 offset-md-1 col-md-5 offset-lg-0 col-lg-4">
+            <div class="card-box">
+
+                <h1><%= markers.lieu %></h1>
+                <%= markers.longitude %>
+                <%= markers.latitude %>
+                <%= markers.description %>
+            </div>
+        </div>
+        <% } %>
+        <% } else { %>
+        <h2>Aucun Article</h2>
+        <% } %>
+    </main>
+</section>
+<% var test = 101; %>
+<script>
+    var getTest = parseFloat('<%= myMarker  %>');  //var test is now assigned to getTest which will only work on browsers
+    console.log(getTest, 'ok');  // successfully prints 101 on browser
+</script>
+<%- include('../includes/footer.ejs') %>
